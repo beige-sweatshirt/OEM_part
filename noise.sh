@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# 10% chance of test failing
-passOrFail=$(( $RANDOM % 10 + 1))
+# 25% chance of test failing
+passOrFail=$(( $RANDOM % 25 + 1))
 
 if [[ $passOrFail == 1 ]]; then
   echo "Suite failed"
