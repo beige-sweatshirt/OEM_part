@@ -1,0 +1,19 @@
+name: Generate noise from CRON job
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow every 4 hours
+  schedule:
+    - cron: "0 0 4 * *"
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+jobs:
+  # This workflow contains a single job called "build"
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run Tests
+        run: bash ./noise.sh
